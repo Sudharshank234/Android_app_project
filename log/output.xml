@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.0.2 (Python 3.11.1 on win32)" generated="20230131 15:19:47.072" rpa="false" schemaversion="3">
+<suite id="s1" name="02 Valid Login" source="C:\Users\40032117\assignment\1_login_suite\02_valid_login.robot">
+<test id="s1-t1" name="Valid Login Test" line="12">
+<kw name="Launch Browser And Navigate TO Url" library="common_functionalities" type="SETUP">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>browser=${BROWSER_NAME}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20230131 15:19:48.921" level="INFO">Opening browser 'chrome' to base url 'None'.</msg>
+<status status="PASS" starttime="20230131 15:19:48.921" endtime="20230131 15:19:52.485"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20230131 15:19:52.486" endtime="20230131 15:19:52.688"/>
+</kw>
+<kw name="Set Selenium Implicit Wait" library="SeleniumLibrary">
+<arg>30s</arg>
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<status status="PASS" starttime="20230131 15:19:52.689" endtime="20230131 15:19:52.697"/>
+</kw>
+<kw name="Go To" library="SeleniumLibrary">
+<arg>url=${URl}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20230131 15:19:52.699" level="INFO">Opening url 'https://www.tnstc.in/home.html'</msg>
+<status status="PASS" starttime="20230131 15:19:52.698" endtime="20230131 15:19:55.301"/>
+</kw>
+<status status="PASS" starttime="20230131 15:19:48.921" endtime="20230131 15:19:55.303"/>
+</kw>
+<kw name="Valid Login Template">
+<arg>sudharshan.k234@gmail.com</arg>
+<arg>dharshan</arg>
+<arg>Search And Book Tickets</arg>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath=//a[text()='E-Ticket Login']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230131 15:19:55.309" level="INFO">Clicking element 'xpath=//a[text()='E-Ticket Login']'.</msg>
+<status status="PASS" starttime="20230131 15:19:55.303" endtime="20230131 15:19:56.090"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>name=txtUserLoginID</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230131 15:19:56.097" level="INFO">Typing text 'sudharshan.k234@gmail.com' into text field 'name=txtUserLoginID'.</msg>
+<status status="PASS" starttime="20230131 15:19:56.090" endtime="20230131 15:19:56.304"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>name=txtPassword</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230131 15:19:56.304" level="INFO">Typing text 'dharshan' into text field 'name=txtPassword'.</msg>
+<status status="PASS" starttime="20230131 15:19:56.304" endtime="20230131 15:19:56.507"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath=//a[@class='dboxheader']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230131 15:19:56.507" level="INFO">Clicking element 'xpath=//a[@class='dboxheader']'.</msg>
+<status status="PASS" starttime="20230131 15:19:56.507" endtime="20230131 15:19:56.620"/>
+</kw>
+<kw name="Element Should Contain" library="SeleniumLibrary">
+<arg>xpath=//td[contains(@class,'search_book')]</arg>
+<arg>${expected_header}</arg>
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<msg timestamp="20230131 15:20:03.918" level="INFO">Element 'xpath=//td[contains(@class,'search_book')]' contains text 'Search And Book Tickets'.</msg>
+<status status="PASS" starttime="20230131 15:19:56.620" endtime="20230131 15:20:03.918"/>
+</kw>
+<status status="PASS" starttime="20230131 15:19:55.303" endtime="20230131 15:20:03.918"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20230131 15:20:03.918" endtime="20230131 15:20:06.283"/>
+</kw>
+<status status="PASS" starttime="20230131 15:19:48.921" endtime="20230131 15:20:06.283"/>
+</test>
+<doc>Thi file contains test cases related to invalid login</doc>
+<status status="PASS" starttime="20230131 15:19:47.081" endtime="20230131 15:20:06.286"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="02 Valid Login">02 Valid Login</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
